@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*! Nút chuyển background và âm thanh---------------------------------------- */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: none;
+    padding: 10px;
+    display: flex;
+}
+
+button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    position: relative;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    color: rgba(30, 30, 146, 0.726);
+    background-color: white;
+    cursor: pointer;
+   }
+   
+   button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 255, 0.2);
+   }
+   
+   button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 255, 0.2);
+   }
+   
+   button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   button::after {
+    background-color: #fff;
+   }
+   
+   button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+
+/** Chỉnh lại hiệu ứng con vật của mình tại đây!!------------------------------------- */
+
+#pufferfish
+{
+	left:10%; bottom:10%;
+	width: 189px; height: 189px;
+	position: absolute;
+	animation-name: pufferfish;
+	animation-duration: 18s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-play-state: running;	
+	transform:scaleX(1)
+}
+@-webkit-keyframes pufferfish
+{
+	0%      {left:10%; bottom:10%;}
+	20%     {left: 25%; bottom: 30%;} 
+    50%     {left: 100%; bottom: 50%px; -webkit-transform: scaleX(1);} 
+    51%     {left: 100%; bottom: 50%; -webkit-transform: scaleX(-1);}
+    70%     {left:80%; bottom: 30%;}
+    80%     {left:50%; bottom: 25%;}
+    99%     {left: 10%; bottom:10%; -webkit-transform: scaleX(-1);}
+    100%    {left: 10%; bottom:10%; -webkit-transform: scaleX(1);}
+
+}
+#crab
+{
+	right:5%; bottom:0%;
+	width: 100px; height: 100px;
+	position: absolute;
+	animation-name: crab;
+	animation-duration: 22s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-play-state: running;	
+	transform:scaleX(1)
+}
+@-webkit-keyframes crab
+{
+    0%      {right:5%;}
+    20%     {right: 40%;}
+    40%     {right: 80%;}
+    50%     {right: 60%;}
+    60%     {right: 100%;}
+    80%     {right: 70%;}
+    90%     {right: 30%;}
+    100%    {right: 5%;}
+
+}
+/* *----------------------------------------------------------------------------------- */

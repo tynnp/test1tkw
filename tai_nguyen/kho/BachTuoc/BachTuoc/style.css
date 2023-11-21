@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*! Nút chuyển background và âm thanh---------------------------------------- */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: none;
+    padding: 10px;
+    display: flex;
+}
+
+button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    position: relative;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    color: rgba(30, 30, 146, 0.726);
+    background-color: white;
+    cursor: pointer;
+   }
+   
+   button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 255, 0.2);
+   }
+   
+   button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 255, 0.2);
+   }
+   
+   button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   button::after {
+    background-color: #fff;
+   }
+   
+   button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+
+   #BachTuoc{
+    left: 100px;bottom: 100px;
+    width: 200px;height: 147px;
+    position: absolute;
+    animation-name: BachTuoc;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    transform: scaleX(1);
+}
+
+@keyframes BachTuoc{
+    0% {
+        left: 50%;
+        bottom: 50%;
+        transform: rotate(0deg);
+    }
+    15% {
+        left: 70%;
+        bottom: 50%;
+        transform: rotate(45deg);
+    }
+    25% {
+        left: 90%;
+        bottom: 100%;
+        transform: rotate(90deg);
+    }
+    40% {
+        left: 180%;
+        bottom: 200%;
+        transform: rotate(135deg);
+    }
+    50% {
+        left: 200%;
+        bottom: 200%;
+        transform: rotate(180deg);
+    }
+    65% {
+        left:180%;bottom: 250%;transform:rotate(-135deg);
+}
+    70%{
+        left:90%;bottom:100%;transform:rotate(-90deg);
+    }
+    85%{
+        left:70%;bottom:50%;transform:rotate(-45deg);
+    }
+    100%{
+        left:70%;bottom:50%;transform:rotate(-0deg);
+    }
+}
